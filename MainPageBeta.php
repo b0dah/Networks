@@ -5,8 +5,14 @@
 </head>
 
 
-<body>
-	<h3>privet</h3>
+<body
+	<br> <br>
+
+	<form action="actionLoadView.php" method="post" >
+		<p> Yo name: <input type="text" name="name" />       	</p>
+		<p>Yo age <input type="text" name="age" />			</p>
+		<p><input type="submit" value="Go!" /> </p>
+	</form>
 
 
 </body>
