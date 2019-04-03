@@ -8,12 +8,12 @@
 
 	<form action="LoadResult.php">
 		<select name=destination size = 1 >
-			<option value=1> Paris </option>
-			<option value=2 selected> Vien </option>
-			<option value=3> Milan </option>
+			<option value="Paris"> Paris </option>
+			<option value="Vein" selected> Vein </option>
+			<option value="Milan"> Milan </option>
 			
 		</select>
-		<input type="submit">
+		<input type="submit" value="get it">
 	</form>
 
 </body>
