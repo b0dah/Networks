@@ -16,5 +16,23 @@
 		<input type="submit" value="get it">
 	</form>
 
+	<?php
+		include 'db_library.php';
+
+		$connection = new DataBase();
+		$sql_line = "SELECT * FROM Flights";
+
+		//$connection->print_select();
+
+		echo " <br>	     From <br>";
+		$result = $connection->query($sql_line);
+		$connection->create_select_form("Origin", $result, 'no', 'from');
+
+		echo " <br>	     To <br>";
+		$connection->create_select_form("Destination", $result, 'no', 'to');
+
+
+	?>
+
 </body>
 </html>
