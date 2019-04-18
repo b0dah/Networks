@@ -16,23 +16,27 @@
 		<input type="submit" value="get it">
 	</form>
 
-	<?php
-		include 'db_library.php';
+<?php
+	include 'db_library.php';
 
-		$connection = new DataBase();
-		$sql_line = "SELECT * FROM Flights";
+	$connection = new DataBase();
+	$sql_line = "SELECT * FROM Flights";
 
-		//$connection->print_select();
+	//$connection->print_select();
+
+	echo "<form action= \"LoadResult.php\" >";
 
 		echo " <br>	     From <br>";
 		$result = $connection->query($sql_line);
-		$connection->create_select_form("Origin", $result, 'no', 'from');
+		$connection->create_select_form("origin", $result, 'no', 'from');
+
 
 		echo " <br>	     To <br>";
-		$connection->create_select_form("Destination", $result, 'no', 'to');
+		$connection->create_select_form("destination", $result, 'no', 'to');
 
-
-	?>
+		echo "<br><br> <input type= \"submit\" value= \"get it\"> ";
+	echo "</form>";
+?>
 
 </body>
 </html>
