@@ -28,7 +28,7 @@ class DataBase
 		    echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
 			exit;
 		}
-		//echo "Connected succesfully";
+		else echo "Connected succesfully";
 	}
 
 	function query($sql_line) {
@@ -64,11 +64,6 @@ class DataBase
 
 		echo "</select>";
 		$query_result->data_seek(0); // cursor to the begin of the result
-	}
-
-	function recordDataToCart(){
-		$query = "INSERT INTO Cart ( from, to ) VALUES ( \"Paris\", \"Vien\" )";
-		$result = $this->$connection->query($query);
 	}
 
 }
