@@ -1,4 +1,4 @@
-
+<!-- <html><body><h1>It works!</h1></body></html> -->
 <?php 
 		$server = "127.0.0.1";//"localhost";
 		$dbUsername = "root";
@@ -14,8 +14,8 @@ if (!isset($_COOCKIE['id'])){
 		$userPassword = mysqli_real_escape_string($connection, trim($_POST['password']));
 
 		if (!empty($userUsername) && !empty($userPassword)) {
-			$query = "SELECT `id` , `username` FROM `Users` WHERE 
-			username = '$userUsername' AND password = '$userPassword' ";
+			$query = "SELECT `id`, `username` FROM `Users` WHERE 
+			username = '$userUsername' AND password = SHA('$userPassword')";
 
 			$data = mysqli_query($connection, $query);
 
@@ -23,8 +23,8 @@ if (!isset($_COOCKIE['id'])){
 				/**/
 				$row = mysqli_fetch_assoc($data);
 
-				setcookie('id', $row['id'], time() + (60*60*24*30) );
-				setcookie('username', $row['username'], time() + (60*60*24*30) );
+				setcookie('id', row['id'], time() + (60*60*24*30) );
+				setcookie('username', row['username'], time() + (60*60*24*30) );
 				/**/
 
 				$homeUrl = 'http://' . $_SERVER['HTTP_HOST'];
@@ -70,6 +70,7 @@ else {
 	echo 'coockies exist';
 
 }
+
 ?>
 </body>
 </html>

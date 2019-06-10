@@ -66,11 +66,6 @@ class DataBase
 		$query_result->data_seek(0); // cursor to the begin of the result
 	}
 
-	function recordDataToCart(){
-		$query = "INSERT INTO Cart ( from, to ) VALUES ( \"Paris\", \"Vien\" )";
-		$result = $this->$connection->query($query);
-	}
-
 }
 
 
