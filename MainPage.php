@@ -5,6 +5,8 @@
 </head>
 
 <body>
+
+	 <button name="buttonName" class="cartButton" onclick="window.location.href = 'cart.php';"> Cart </button>
 	
 </body>
 </html>
