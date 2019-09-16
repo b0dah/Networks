@@ -1,0 +1,35 @@
+telnet towel.blinkenlights.nl
+
+
+
+
+
+
+GET /HTTP/1.1
+
+
+
+
+
+
+telnet localhost 80 | tee -a log.txt
+
+GET http://localhost/mainpage.php HTTP/1.1
+Host: localhost
+
+HEAD /file.tar.gz HTTP/1.1
+Host: localhost
+
+HEAD /FileZilla.png HTTP/1.1
+Host: localhost
+
+
+
+
+POST /2/index.php HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: UTF-8
+Content-Length: 16
+
+comment=commmmmmmmmeeent

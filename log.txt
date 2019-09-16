@@ -1,0 +1,482 @@
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 12:08:10 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+X-Powered-By: PHP/7.1.23
+Content-Length: 1005
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+	<title>** Main page **</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<body>
+
+	 <button name="buttonName" class="cartButton" onclick="window.location.href = 'cart.php';"> Cart </button>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<form action= "LoadResult.php" > 	 <h3>    From  </h3> <select name =  "origin" ><option value="Paris">Paris</option><option value="Milan">Milan</option><option value="Moscow">Moscow</option><option value="Paris">Paris</option><option value="Madrid">Madrid</option><option value="Porto">Porto</option><option value="Valencia">Valencia</option></select>  <h3>    To  </h3> <select name =  "destination" ><option value="Vein">Vein</option><option value="Vein">Vein</option><option value="Basel">Basel</option><option value="Milan">Milan</option><option value="Lisbon">Lisbon</option><option value="Lion">Lion</option><option value="Hamburg">Hamburg</option></select><br><br><input id="submit_button" type= "submit" value= "get it" ></form>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:11:40 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:26:27 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:26:50 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:27:15 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:27:33 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:27:50 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:28:33 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:29:27 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:30:29 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:35:54 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:36:46 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:37:06 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 12:38:27 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 12:46:11 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+X-Powered-By: PHP/7.1.23
+Content-Length: 1005
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+	<title>** Main page **</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<body>
+
+	 <button name="buttonName" class="cartButton" onclick="window.location.href = 'cart.php';"> Cart </button>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<form action= "LoadResult.php" > 	 <h3>    From  </h3> <select name =  "origin" ><option value="Paris">Paris</option><option value="Milan">Milan</option><option value="Moscow">Moscow</option><option value="Paris">Paris</option><option value="Madrid">Madrid</option><option value="Porto">Porto</option><option value="Valencia">Valencia</option></select>  <h3>    To  </h3> <select name =  "destination" ><option value="Vein">Vein</option><option value="Vein">Vein</option><option value="Basel">Basel</option><option value="Milan">Milan</option><option value="Lisbon">Lisbon</option><option value="Lion">Lion</option><option value="Hamburg">Hamburg</option></select><br><br><input id="submit_button" type= "submit" value= "get it" ></form>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 12:46:43 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+X-Powered-By: PHP/7.1.23
+Content-Length: 1005
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+	<title>** Main page **</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<body>
+
+	 <button name="buttonName" class="cartButton" onclick="window.location.href = 'cart.php';"> Cart </button>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<form action= "LoadResult.php" > 	 <h3>    From  </h3> <select name =  "origin" ><option value="Paris">Paris</option><option value="Milan">Milan</option><option value="Moscow">Moscow</option><option value="Paris">Paris</option><option value="Madrid">Madrid</option><option value="Porto">Porto</option><option value="Valencia">Valencia</option></select>  <h3>    To  </h3> <select name =  "destination" ><option value="Vein">Vein</option><option value="Vein">Vein</option><option value="Basel">Basel</option><option value="Milan">Milan</option><option value="Lisbon">Lisbon</option><option value="Lion">Lion</option><option value="Hamburg">Hamburg</option></select><br><br><input id="submit_button" type= "submit" value= "get it" ></form>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:08:03 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 13:08:52 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Last-Modified: Mon, 09 Sep 2019 10:36:07 GMT
+ETag: "2c47-5921c5affb3c0"
+Accept-Ranges: bytes
+Content-Length: 11335
+Content-Type: application/x-gzip
+
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 13:10:31 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Last-Modified: Mon, 09 Sep 2019 10:36:07 GMT
+ETag: "1865b-5921c5affb3c0"
+Accept-Ranges: bytes
+Content-Length: 99931
+Content-Type: image/png
+
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:26:19 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:26:28 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:29:39 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 13:30:26 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+X-Powered-By: PHP/7.1.23
+Content-Length: 57
+Content-Type: text/html; charset=UTF-8
+
+Array
+(
+    [comment] => commmmmm
+)
+Привет, мир!HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:30:27 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Mon, 09 Sep 2019 13:32:02 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+X-Powered-By: PHP/7.1.23
+Content-Length: 57
+Content-Type: text/html; charset=UTF-8
+
+Array
+(
+    [comment] => commmmmm
+)
+Привет, мир!HTTP/1.1 400 Bad Request
+Date: Mon, 09 Sep 2019 13:32:03 GMT
+Server: Apache/2.4.34 (Unix) PHP/7.1.23
+Content-Length: 226
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+</body></html>
