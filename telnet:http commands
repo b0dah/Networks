@@ -1,15 +1,10 @@
+=> ACCESS: telnet localhost 80 | tee -a log.txt
+
+
 telnet towel.blinkenlights.nl
 
 
-
-
-
-
 GET /HTTP/1.1
-
-
-
-
 
 
 telnet localhost 80 | tee -a log.txt
@@ -29,7 +24,16 @@ Host: localhost
 POST /2/index.php HTTP/1.1
 Host: localhost
 Content-Type: application/x-www-form-urlencoded
-Accept-Encoding: UTF-8
-Content-Length: 16
+Content-Length: 30
 
 comment=commmmmmmmmeeent
+
+
+
+GET /2/file.tar.gz HTTP/1.1
+Host: localhost
+Range: bytes=0-99
+
+
+HEAD /2/index.php HTTP/1.1
+Host: localhost

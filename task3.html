@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+<script>
+// Создаем объект класса XMLHttpRequest.
+var async = true;
+var xhr = new XMLHttpRequest();
+ 
+function getPage() {
+  // Настраиваем синхронный запрос.
+  xhr.open('GET', '/MainPage.php', async);
+
+  if (async) {
+  		xhr.onreadystatechange = function() {
+	 	if (xhr.readyState == 4 &&
+	 	xhr.status == 200) {
+	 		alert(xhr.responseText);
+		} 
+	}
+  }
+  // Отправляем запрос.
+  xhr.send();
+
+  if (!async) {
+	  alert(xhr.responseText);
+  }
+  // Возвращаем false чтобы форма не отправлялась на сервер и страница не перезагружалась.
+  return false;
+}
+
+ function determineTheFileSize() {
+ 	xhr.open('HEAD', '/WebProgr/2/file.tar.gz', async);
+
+ 	if (async) {
+  		xhr.onreadystatechange = function() {
+	 		if (xhr.readyState == 4 &&
+	 		xhr.status == 200) {
+				alert(xhr.getResponseHeader('content-length'));
+			} 
+		}
+ 	}
+
+	xhr.send();
+
+	if (!async) {
+		alert(xhr.getResponseHeader('content-length'));
+	}
+
+	return false;
+}
+
+function getFileType() {
+	xhr.open('HEAD', '/WebProgr/2/FileZilla.png', async);
+
+	if (async) {
+  		xhr.onreadystatechange = function() {
+	 		if (xhr.readyState == 4 &&
+	 		xhr.status == 200) {
+				alert(xhr.getResponseHeader('content-type'));
+			} 
+		}
+ 	}
+	xhr.send();
+
+	if (!async){
+		alert(xhr.getResponseHeader('content-type'));
+	}
+	return false;
+}
+
+function getBytesFromFile() {
+	xhr.open('POST', '/WebProgr/2/file.tar.gz', async);
+	xhr.setRequestHeader('Range', 'bytes=0-99');
+
+	if (async) {
+  		xhr.onreadystatechange = function() {
+	 		if (xhr.readyState == 4 &&
+	 		xhr.status == 206) { //WORKS w/ 206 only
+	 			alert(xhr.responseText);
+				alert(xhr.getResponseHeader('content-length'));
+	 		}
+	 	}
+	}
+	xhr.send();
+
+	if (!async) {
+		alert(xhr.responseText);
+		alert(xhr.getResponseHeader('content-length'));
+	}
+	return false;
+}
+
+ function sendCommentToTheServer() {
+	xhr.open('POST', '/WebProgr/2/index.php', async);
+	xhr.setRequestHeader("Content-type",
+	  "application/x-www-form-urlencoded");
+
+	if (async){
+	//Рассмотрим пример обработчика события onreadystatechange:
+		xhr.onreadystatechange = function() {
+	 		if (xhr.readyState == 4 &&
+	 		xhr.status == 200) {
+	 			alert(xhr.responseText);
+			} 
+		}
+	}
+	xhr.send("comment=Hello%20World!&name=Anonymous");
+
+	if (!async) {
+		alert(xhr.responseText);
+	}
+	return false;
+}
+
+function determineFileEncoding() {
+	xhr.open('HEAD','/WebProgr/2/index.php', async);
+	if (async) {
+  		xhr.onreadystatechange = function() {
+	 		if (xhr.readyState == 4 &&
+	 		xhr.status == 200) {
+	 				alert(xhr.getResponseHeader('content-type'));
+	 		}
+	 	}
+	}
+	xhr.send();
+
+	if (!async) {
+		alert(xhr.getResponseHeader('content-type'));
+	}
+	return false;
+}	
+
+
+</script>
+
+	<style>
+		.button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: block;
+		  margin: 30px auto;
+		  font-size: 16px;
+		}
+	  	
+	</style>
+	
+</head>
+<body>
+
+	<div id="frag"> </div>
+
+	<form>
+		<input class="button" type="submit" value="Get page" onclick="return getPage();"/>
+		<input class="button" type="submit" value="Determine file size" onclick="return determineTheFileSize();"/>
+		<input class="button" type="submit" value="Get file type" onclick="return getFileType();"/>
+		<input class="button" type="submit" value="Send comment" onclick="return sendCommentToTheServer();"/>
+		<input class="button" type="submit" value="Get bytes from file" onclick="return getBytesFromFile();"/>
+		<input class="button" type="submit" value="Determine file encoding" onclick="return determineFileEncoding();"/>
+
+
+	</form>
+
+</body>
+</html>
