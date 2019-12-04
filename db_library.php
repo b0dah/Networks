@@ -1,10 +1,10 @@
 <?php  
-
+error_reporting( error_reporting() & ~E_NOTICE );
 /**
  * class for working w/ database  
  */
-class DataBase
-{
+class DataBase {
+	
 	private $connection;
 
 	function __construct()
