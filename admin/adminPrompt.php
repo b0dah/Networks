@@ -15,14 +15,61 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
   print('<h1>401 Требуется авторизация</h1>');
   exit();
 }
-print('Вы успешно авторизовались и видите защищенные паролем данные.');
+//print('<p> Вы успешно авторизовались и видите защищенные паролем данные. </p>');
 ?>
 
 <html>
 <head>
 	<title> ********* Admin Prompt ********* </title>
+	<style>
+		table {
+			width: 50%;
+			border-collapse: collapse;
+			margin: 40px auto;
+		}
+		
+		th, td {
+			padding: 8px 20px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		
+		input[type="submit"] {
+			background-color: #ffcc99;
+			color: #fff;
+			border-radius: 8px;
+			padding: 5px 10px;
+			font-size: 16px;
+			border: none;
+		}
+		
+		tr: hover {
+			background-color: #f5f5f5;
+		}
+		
+		body {
+/*			background-image: url("back.jpg");*/
+/*			background-size: cover;*/
+			font-family: Arial;
+		}
+		
+		.header {
+			padding: 10px;
+			text-align: center;
+			background: #1abc9c;
+			color: white;
+			font-size: 20px;
+		}
+	
+	</style>
+	
 </head>
 <body>
+
+<div class="header">
+	<h1>Airline</h1>
+	<p>Вы успешно авторизовались и видите защищенные данные</p>
+</div>
 
 <?php
 	error_reporting( error_reporting() & ~E_NOTICE );
@@ -42,7 +89,7 @@ print('Вы успешно авторизовались и видите защи
 
 <form>
 
-<table border="1" align="center">
+<table>
 	<tr>
 		<th> No # </th>
 		<th> From </th>
@@ -67,7 +114,7 @@ print('Вы успешно авторизовались и видите защи
 	<td> <?php	echo $row["time"]?> </td>
 	<td> <?php	echo $row["duration"]?> </td>
 	<td> <?php	echo $row["cost"]?> </td>
-	<td> <input type="checkbox" name="chk[]" value="<?php echo $row["no"]?>"></td>
+	<td> <input align="center" type="checkbox" name="chk[]" value="<?php echo $row["no"]?>"></td>
 	</tr>
 	
 	<?php 
