@@ -7,33 +7,36 @@
 <!-- 		src=”saveNRestoreForm.js”> -->
 		<script > 
 			
-			function writeCoockie() {
-				if (document.auth_form.name.value == ""){
-					//alert("Enter some!");
-					return;
-				}
-				cookievalue = escape(document.auth_form.name.value) + ";";
-									document.cookie = "name=" + cookievalue;
-									document.write ("Setting Cookies : " + "name=" + cookievalue );
-			}
-			
-			function readCookie() {
-				var allcookies = document.cookie;
-				//document.write ("All Cookies : " + allcookies );
-				
-				// Get all the cookies pairs in an array
-				cookiearray = allcookies.split(';');
-				
-				// Now take key value pair out of this array
-				for(var i=0; i<cookiearray.length; i++) {
-					name = cookiearray[i].split('=')[0];
-					value = cookiearray[i].split('=')[1];
-					//document.write ("Key is : " + name + " and Value is : " + value);
-					document.getElementById("name").value = value;
-				}
-			}
+//			function writeCoockie() {
+//				if (document.auth_form.name.value == ""){
+//					//alert("Enter some!");
+//					return;
+//				}
+//				cookievalue = escape(document.auth_form.name.value) + ";";
+//									document.cookie = "name=" + cookievalue;
+//									document.write ("Setting Cookies : " + "name=" + cookievalue );
+//			}
+//			
+//			function readCookie() {
+//				var allcookies = document.cookie;
+//				//document.write ("All Cookies : " + allcookies );
+//				
+//				// Get all the cookies pairs in an array
+//				cookiearray = allcookies.split(';');
+//				
+//				// Now take key value pair out of this array
+//				for(var i=0; i<cookiearray.length; i++) {
+//					name = cookiearray[i].split('=')[0];
+//					value = cookiearray[i].split('=')[1];
+//					//document.write ("Key is : " + name + " and Value is : " + value);
+//					document.getElementById("name").value = value;
+//				}
+//			}
 			
 		</script>
+		
+		
+		<script type="text/javascript" src="saveNRestoreForm.js"></script>
 		
 		<style>
 		
@@ -86,7 +89,9 @@
 			
 			body {
 				font-family: Arial;
-				
+				margin: 0;
+					padding: 0;
+
 			}
 			
 			.header {
@@ -106,13 +111,15 @@
 	</head>
 	
 <!-- 	STORING N LOADING COOKIE -->
-	<body onunload="writeCoockie()"
-		onload="readCookie()"
-	>
-			
-		
+<!-- 	<body onunload="writeCoockie()" -->
+<!-- 		onload="readCookie()" -->
+<!-- 	> -->
+
+
+<!-- 		<body onload="saveSelections(document.forms[0])"> -->
+		<body>
 	
-		<form  action="sendDataResult.php" method="get" name="auth_form">
+		<form  action="sendDataResult.php" method="get" name="auth_form" id="auth_form">
 		
 			<label for="name"><b>Username</b></label>
 			<input id="name" name="name" type="text" placeholder="Enter your username"/> <br>
@@ -122,25 +129,24 @@
 			
 			<label for="birth_year"><b>Birth year</b></label>
 			<input name="birth_year" type="number" min="1990" max="2019" step="1" value="1998"/> <br>
-<!-- 			<input type="year"/> <br> -->
 
-			<label for="gender"><b>Gender</b></label> <br>
-			<input type="radio" name="gender" value="Male"/> Male
-			<input type="radio" name="gender" value="Female"/> Female
-			<input type="radio" name="gender" value="Other"/> Other <br>
+<!-- 			<label for="gender"><b>Gender</b></label> <br> -->
+<!-- 			<input type="radio" name="gender" value="Male"/> Male -->
+<!-- 			<input type="radio" name="gender" value="Female"/> Female -->
+<!-- 			<input type="radio" name="gender" value="Other"/> Other <br> -->
+<!-- 			 -->
+<!-- 			<label for="number_of_limbs"><b>I have</b></label> <br> -->
+<!-- 			<input type="radio" name="number_of_limbs" value="1"> 1 -->
+<!-- 			<input type="radio" name="number_of_limbs" value="2"> 2 -->
+<!-- 			<input type="radio" name="number_of_limbs" value="4"> 4 -->
+<!-- 			<label for="number_of_limbs"><b> limbs</b></label> <br> -->
 			
-			<label for="number_of_limbs"><b>I have</b></label> <br>
-			<input type="radio" name="number_of_limbs" value="1"> 1
-			<input type="radio" name="number_of_limbs" value="2"> 2
-			<input type="radio" name="number_of_limbs" value="4"> 4
-			<label for="number_of_limbsder"><b> limbs</b></label> <br>
-			
-			<label for="superpower"><b>My superpower is </b></label>
-			<br><select name="superpower">
-				<option value="Immortality">Immortality</option>
-				<option value="Walikng through walls">Walikng through walls</option>
-				<option value="Levitation">Levitation</option>
-			</select> <br> 
+<!-- 			<label for="superpower"><b>My superpower is </b></label> -->
+<!-- 			<br><select name="superpower"> -->
+<!-- 					<option value="Immortality">Immortality</option> -->
+<!-- 					<option value="Walikng through walls">Walikng through walls</option> -->
+<!-- 					<option value="Levitation">Levitation</option> -->
+<!-- 			</select> <br>  -->
 			
 			<label for="biography"><b> Short vita</b></label>
 			<textarea name="biography" rows="4" > </textarea> <br>
@@ -152,7 +158,9 @@
 			
 		</form> 
 		
-		
-		
+		<button onclick="saveSelections(document.forms[0])">save</button>
+		<button onclick="loadSelections(document.forms[0])">retrieve</button>
+<!-- 		<script language=JavaScript type="">loadSelections(document.forms[0]); </script> -->
+			
 	</body>
 </html
