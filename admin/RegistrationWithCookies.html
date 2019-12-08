@@ -116,37 +116,36 @@
 <!-- 	> -->
 
 
-<!-- 		<body onload="saveSelections(document.forms[0])"> -->
-		<body>
+	<body onunload="saveSelections(document.forms[0])">
 	
 		<form  action="sendDataResult.php" method="get" name="auth_form" id="auth_form">
 		
 			<label for="name"><b>Username</b></label>
-			<input id="name" name="name" type="text" placeholder="Enter your username"/> <br>
+			<input id="name" name="name" type="text" placeholder="Enter your username" required/> <br>
 			
 			<label for="e-mail"><b>E-mail</b></label>
-			<input name="e-mail" type="text" placeholder="Enter your e-mail"/> <br>
+			<input name="e-mail" type="text" placeholder="Enter your e-mail" required/> <br>
 			
 			<label for="birth_year"><b>Birth year</b></label>
 			<input name="birth_year" type="number" min="1990" max="2019" step="1" value="1998"/> <br>
 
-<!-- 			<label for="gender"><b>Gender</b></label> <br> -->
-<!-- 			<input type="radio" name="gender" value="Male"/> Male -->
-<!-- 			<input type="radio" name="gender" value="Female"/> Female -->
-<!-- 			<input type="radio" name="gender" value="Other"/> Other <br> -->
-<!-- 			 -->
-<!-- 			<label for="number_of_limbs"><b>I have</b></label> <br> -->
-<!-- 			<input type="radio" name="number_of_limbs" value="1"> 1 -->
-<!-- 			<input type="radio" name="number_of_limbs" value="2"> 2 -->
-<!-- 			<input type="radio" name="number_of_limbs" value="4"> 4 -->
-<!-- 			<label for="number_of_limbs"><b> limbs</b></label> <br> -->
+			<label for="gender"><b>Gender</b></label> <br>
+			<input type="radio" name="gender" value="Male"/> Male
+			<input type="radio" name="gender" value="Female"/> Female
+			<input type="radio" name="gender" value="Other"/> Other <br>
 			
-<!-- 			<label for="superpower"><b>My superpower is </b></label> -->
-<!-- 			<br><select name="superpower"> -->
-<!-- 					<option value="Immortality">Immortality</option> -->
-<!-- 					<option value="Walikng through walls">Walikng through walls</option> -->
-<!-- 					<option value="Levitation">Levitation</option> -->
-<!-- 			</select> <br>  -->
+			<label for="number_of_limbs"><b>I have</b></label> <br>
+			<input type="radio" name="number_of_limbs" value="1"> 1
+			<input type="radio" name="number_of_limbs" value="2"> 2
+			<input type="radio" name="number_of_limbs" value="4"> 4
+			<label for="number_of_limbs"><b> limbs</b></label> <br>
+			
+			<label for="superpower"><b>My superpower is </b></label>
+			<br><select name="superpower">
+					<option value="Immortality">Immortality</option>
+					<option value="Walikng through walls">Walikng through walls</option>
+					<option value="Levitation">Levitation</option>
+			</select> <br> 
 			
 			<label for="biography"><b> Short vita</b></label>
 			<textarea name="biography" rows="4" > </textarea> <br>
@@ -158,9 +157,10 @@
 			
 		</form> 
 		
-		<button onclick="saveSelections(document.forms[0])">save</button>
-		<button onclick="loadSelections(document.forms[0])">retrieve</button>
-<!-- 		<script language=JavaScript type="">loadSelections(document.forms[0]); </script> -->
+		<script language=JavaScript type="">loadSelections(document.forms[0]); </script>
+		
+<!-- 		<button onclick="saveSelections(document.forms[0])">save</button> -->
+<!-- 		<button onclick="loadSelections(document.forms[0])">retrieve</button> -->
 			
 	</body>
 </html

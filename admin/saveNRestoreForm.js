@@ -62,9 +62,9 @@ function saveSelections(frm) {
 		var index;
 		var formname = frm.name;
 
-		// Expire cookie in 999 days.
+		// Expire cookie in 1 day.
 		var today = new Date();
-		var exp   = new Date(today.getTime()+999*24*60*60*1000);
+		var exp   = new Date(today.getTime()+1*24*60*60*1000);
 
 		var string = "formname=" + formname + "|";
 		var cookieName = formname;
@@ -81,28 +81,25 @@ function saveSelections(frm) {
 			fieldType   = frm[i].type;
 
 			//alert(e);
-			alert(fieldType);
+//			alert(fieldType);
 			//alert(fieldValue);
 
-			//
 			// RADIO BUTTON
-			//
+			var checkedRadioButtonIndex = 0; // 0 by default
 			if (fieldType == "radio") {
-//				for (x=0; x < frm.elements[e].length; x++) {
-//					if (frm.elements[e][x].checked) {
-//						index = x;
-//						string = string + index + "|";
-//						
-//					}
-//				}
-				
-				if (frm.elements[e].checked) {
-					let index = frm.elements[i].options.selectedIndex;
-					string = string + index + "|";
-					
+				for (x=0; x < frm.elements[e].length; x++) {
+					if (frm.elements[e][x].checked) {
+						checkedRadioButtonIndex = x;
+					}
 				}
-
-				
+			string += checkedRadioButtonIndex + "|";
+//				alert("RADIO");
+//				if (frm.elements[e].checked) {
+//					alert("selected index = "+frm.elements[i].options.selectedIndex);
+//					checkedRadioButtonIndex = frm.elements[i].options.selectedIndex;
+//					alert("checked index = " + checkedRadioButtonIndex);
+//					string = string + checkedRadioButtonIndex + "|";
+//				}
 			}
 
 			// TEXT, TEXTAREA, and DROPDOWN
@@ -141,12 +138,10 @@ function saveSelections(frm) {
 			
 			// NUMBER
 			if (fieldType == "number") {
-				alert("NUMBER");
 				string += frm.elements[e].value.toString() + "|";	
 			}
 		}
 
-//alert(string);
 		setCookie(cookieName, string, exp); 
 
 }
@@ -178,7 +173,7 @@ function loadSelections(frm) {
 		alert("NULL");
 	}
 
-	alert(fieldArray);
+//	!!!alert(fieldArray);
 //alert(fieldArray[0]);
 //alert(fieldArray[1]);
 //alert(fieldArray[2]);
@@ -205,24 +200,23 @@ function loadSelections(frm) {
 			}
 
 			//SELECT
-//			if (fieldType == "select-one") {
+			if (fieldType == "select-one") {
 //				alert("Before option setting: " + fieldValue);
-//				frm.elements[e].options[fieldValue].selected = true;
-//			}
+				frm.elements[e].options[fieldValue].selected = true;
+			}
 			
 			if (fieldType == "select-one") {
-				alert("xxxxx" + fieldType);
+//				alert("xxxxx" + fieldType);
 //				alert("DESC " + typeof fieldValue);
 				//let index = parseInt(fieldValue);
 				let index = Number(fieldValue);
 				//string = string + frm.elements[e].options.selectedIndex + "|";
-				alert("indextype " + typeof index);
+//				alert("indextype " + typeof index);
 				frm.elements[e].options[index].selected = true;
 				
 			}
 
 			// CHECKBOX
-			//
 			if (fieldType == "checkbox")
 			{
 				fld_checkbox = fieldValue;
@@ -232,8 +226,10 @@ function loadSelections(frm) {
 			}
 
 			// RADIO BUTTON
-			//
 			if (fieldType == "radio") {
+				if (fieldValue == null) {
+					alert("RADIO is NULL");
+				}
 				x = fieldValue;
 //				alert("Current Radio = " + x);
 				//alert(x);
