@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Задача 10. Реализовать вход администратора с использованием
  * HTTP-авторизации для просмотра и удаления результатов.
@@ -83,11 +83,13 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 		}
 
 	$query = mysqli_query($connection, "SELECT * FROM Flights");
-		$row_count=mysqli_num_rows($query);
+	$row_count=mysqli_num_rows($query);
+	
+	
 	
 	?>
 
-<form>
+<form action="adminPrompt.php" method="post" >
 
 <table>
 	<tr>
