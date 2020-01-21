@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="css/text" href="SurveyStyle.css">
+		<title>Мой новый год</title>
+		
+		<div class="header">
+			<!-- 			<h1>Мой Новый Год</h1> -->
+			<h1>new year</h1>
+			<p> Расскажи про свой идеальный праздник</p>
+		</div>
+	</head>
+	
+	
+	<body>
+	
+		<audio id="screamer">
+			<source src="pig.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		
+		<form>
+			<label for="name"> <b> Введи свое имя </b> </label> 
+			<input id="name" type="text">
+			
+			<label for="gender"><b>Твой пол</b></label> <br>
+			<input type="radio" name="gender" value="Мальчик"/> Мальчик
+			<input type="radio" name="gender" value="Девочка"/> Девочка
+<!-- 		<input id="submitButton" type="submit" value="Далее"> -->
+		</form>
+		
+		<button type="button" id="submitButton">Далее</button>
+		
+
+		<script>
+			var sound = document.getElementById("screamer");
+			var submit = document.getElementById("submitButton");
+			
+			submit.onclick = function () {
+				sound.play();
+				alert("Обнаружен фурфунец!!!")
+			}
+		</script>
+		
+	</body>
+</html>

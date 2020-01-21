@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="css/text" href="SurveyStyle.css">
+		<title></title>
+		
+		<div class="header">
+			<!-- 			<h1>Мой Новый Год</h1> -->
+			<h1>new year</h1>
+			<p> Расскажи про свой идеальный праздник</p>
+		</div>
+		
+	</head>
+	<body>
+		<audio id="screamer">
+			<source src="pig.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+				
+		<script>
+			window.onload = function () {
+				var sound = document.getElementById("screamer");
+				sound.play();
+				console.log("after play");
+			}
+			
+		</script>
+	</body>
+</html>

@@ -16,6 +16,32 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
   exit();
 }
 //print('<p> Вы успешно авторизовались и видите защищенные паролем данные. </p>');
+
+// render or delete branching
+	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+		error_reporting( error_reporting() & ~E_NOTICE );
+			include 'db_config.php';
+
+		$query = mysqli_query($connection, "SELECT * FROM Flights");
+		$row_count=mysqli_num_rows($query);
+	} else {
+		error_reporting( error_reporting() & ~E_NOTICE );
+			include 'db_config.php';
+			
+		$checked = $_REQUEST["chk"];
+		$numbers_to_delete=implode(", ", $checked);
+		//$safe_numbers_to_delete = $connection->real_escape_string($numbers_to_delete);
+		
+		$delete_query = mysqli_query($connection, "DELETE FROM Flights where no in ($numbers_to_delete)");
+//		$delete_query = $connection->prepare("DELETE FROM Flights where no in ?");
+//		$delete_query->bind_param("no", $numbers_to_delete);
+		
+		//$delete_query->execute();
+			
+				
+		// get
+		header('Location: adminPrompt.php');
+	}
 ?>
 
 <html>
@@ -71,23 +97,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 	<p>Вы успешно авторизовались и видите защищенные данные</p>
 </div>
 
-<?php
-	error_reporting( error_reporting() & ~E_NOTICE );
-	include 'db_config.php';
-	
-	if (isset($_REQUEST["submit_button"])) {
-			$checked = $_REQUEST["chk"];
-			$numbers_to_delete=implode(", ", $checked);
-			
-			$delete_query = mysqli_query($connection, "DELETE FROM Flights where no in ($numbers_to_delete)");
-		}
 
-	$query = mysqli_query($connection, "SELECT * FROM Flights");
-	$row_count=mysqli_num_rows($query);
-	
-	
-	
-	?>
 
 <form action="adminPrompt.php" method="post" >
 
@@ -109,14 +119,14 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 	?>
 	
 	<tr>
-	<td> <?php	echo $row["no"]?> </td>
-	<td> <?php	echo $row["from"]?> </td>
-	<td> <?php	echo $row["to"]?> </td>
-	<td> <?php	echo $row["date"]?> </td>
-	<td> <?php	echo $row["time"]?> </td>
-	<td> <?php	echo $row["duration"]?> </td>
-	<td> <?php	echo $row["cost"]?> </td>
-	<td> <input align="center" type="checkbox" name="chk[]" value="<?php echo $row["no"]?>"></td>
+	<td> <?php	echo strip_tags($row["no"]))?> </td>
+	<td> <?php	echo strip_tags($row["from"])?> </td>
+	<td> <?php	echo strip_tags($row["to"])?> </td>
+	<td> <?php	echo strip_tags($row["date"])?> </td>
+	<td> <?php	echo strip_tags($row["time"])?> </td>
+	<td> <?php	echo strip_tags($row["duration"])?> </td>
+	<td> <?php	echo strip_tags($row["cost"])?> </td>
+	<td> <input align="center" type="checkbox" name="chk[]" value="<?php echo echo strip_tags($row["no"])?>"></td>
 	</tr>
 	
 	<?php 
